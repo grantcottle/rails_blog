@@ -1,14 +1,35 @@
-<h1>All Articles</h1> 
-
-<ul id="articles">
-  <% @articles.each do |article| %>
-    <li>
-      <%=link_to article.title,
-        article_path(article), class: 'article_title',
-        id: "article_#{article.id}" %>
-    <li>
-  <% end %> 
-</ul> 
-
-<%= link_to "Create a New Article", new_article_path, class: "new_article" %>
-
+<section id="text">
+  <div id="blog">
+    <h1 class="title">All Articles</h1> 
+    <div class="posts">
+    <% @articles.each do |article| %>
+      <h1>
+         <%= link_to article.title, article_path(article), class: 'article_title', id: "article_#{article.id}" %>
+      </h1>
+      <p>
+      <span class="date"><i class="fa fa-calendar-o"></i>
+       <%= article.created_at.to_date.to_s(:rfc822) %> 
+      </span></p>
+      <div class="content">
+        <%= article.body %> <%#TODO: change this to article description %>
+      </div> 
+      <hr>
+    <% end %> 
+    </div>
+    <ul class="pager">
+      <li>
+        <a href="http://www.url.com" target="_blank">
+          <i class="fa fa-angle-left">
+          </i>
+        </a>
+      </li>
+      <span class="page_number">Page: 1 of 4</span>
+      <li>
+        <a href="http://www.url.com" target="_blank">
+          <i class="fa fa-angle-right">
+          </i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

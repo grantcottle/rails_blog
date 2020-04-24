@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  include ArticlesHelper
+
   def index
     @articles = Article.all
   end
@@ -20,10 +22,21 @@ class ArticlesController < ApplicationController
     end
   end
 
-  private
+  def edit
+    @article = Article.find(params[:id])
+  end
 
-  def article_params
-    params.require(:article).permit(:title, :body)
+  def update
+    @article = Article.find(params[:id])
+    @article.update(article_params)
+
+    flash.notice = "Article '#{@article.title}' Updated!"
+
+    redirect_to article_path(article_params)
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    redirect_to articles_path if @article.destroy
   end
 end
-

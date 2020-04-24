@@ -1,0 +1,137 @@
+body {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Roboto Slab", sans-serif;
+    color: #222;
+}
+a {
+    color: #e74c3c;
+}
+a:hover {
+    text-decoration: none;
+}
+p {
+    line-height: 1.5em;
+    margin-bottom: 300;
+}
+#logo {
+    text-align: center;
+    margin: 15px 4px;
+
+    div.logo-text {
+        text-align: left;
+    }
+    h1 {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+        color: #e74c3c;
+        font-family: "Roboto Slab", sans-serif;
+        font-weight: 900;
+    }
+    img {
+        margin: 4px;
+        height: auto;
+        width: 52px;
+    }
+    .subtitle {
+        font-style: italic;
+        color: #aaa;
+        font-weight: 300;
+    }
+}
+
+footer {
+    height: 3em;
+    border-top: 1px solid #ddd;
+    margin: 50px auto 50px;
+    width: 80%;
+
+    .contact {
+        margin: 10px 0 0 10px;
+        text-align: center;
+        font-size: 0.8em;
+        color: #444;
+
+        .icons {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+        }
+    }
+}
+nav {
+    line-height: 2em;
+    text-align: center;
+
+    ul {
+        display: block;
+        margin: 1em 0 1em 0;
+        padding: 0;
+
+        li {
+            display: inline;
+            padding: 12px 18px;
+            color: #444;
+
+            a {
+                display: inline-block;
+                padding: 12px 18px;
+                color: #444;
+            }
+        }
+    }
+}
+h1.title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+#home {
+    text-align: center;
+
+    p.lead {
+        color: #aaa;
+        font-size: 1.5em;
+        margin-top: 30px;
+        font-weight: 300;
+        font-style: italic;
+        margin-bottom: 120px;
+    }
+    .image {
+        margin: auto;
+        margin-top: 120px;
+    }
+}
+#blog {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#text {
+    text-align: left;
+    width: 600px;
+    margin: auto;
+
+    ul,
+    ol {
+        margin-bottom: 1.5em;
+        li {
+            line-height: 1.5em;
+            margin-top: 0.5em;
+        }
+    }
+}
+.pager {
+    margin-top: 50px;
+
+    li {
+        display: inline;
+    }
+}
+.pager_number {
+    margin: 0 30px;
+    color: #777;
+}
