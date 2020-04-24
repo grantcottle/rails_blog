@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'pages#home'
   get 'home', to: 'pages#home'
   get 'about', to: 'pages#about'
@@ -7,4 +6,10 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :tags
+  resources :authors
+
+  resources :author_sessions, only: [:new, :create, :destroy]
+
+  get 'login', to: 'author_sessions#new'
+  get 'logout', to: 'author_sessions#destroy'
 end
