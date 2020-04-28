@@ -17,20 +17,8 @@
     <% end %> 
     <%= link_to "Create a new article",  new_article_path%>
     </div>
-    <ul class="pager">
-      <li>
-        <a href="http://www.url.com" target="_blank">
-          <i class="fa fa-angle-left">
-          </i>
-        </a>
-      </li>
-      <span class="page_number">Page: 1 of 4</span>
-      <li>
-        <a href="http://www.url.com" target="_blank">
-          <i class="fa fa-angle-right">
-          </i>
-        </a>
-      </li>
-    </ul>
+    <div class="pager_pagination">
+      <%= will_paginate @articles %> 
+    </div>
   </div>
 </section>

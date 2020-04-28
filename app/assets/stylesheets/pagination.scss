@@ -1,0 +1,54 @@
+.pager_pagination {
+    padding: 0.3em;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+
+    a,
+    span,
+    em {
+        padding: 0.2em 0.5em;
+    }
+
+    .disabled {
+        color: #aaaaaa;
+    }
+
+    .current {
+        font-style: normal;
+        font-weight: bold;
+        color: #ff0084;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        border-radius: 15px;
+    }
+
+    .page_info {
+        color: #aaaaaa;
+        padding-top: 0.8em;
+    }
+
+    .previous_page,
+    .next_page {
+        border-width: 2px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+    }
+
+    .previous_page {
+        margin-right: 1em;
+    }
+
+    .next_page {
+        margin-left: 1em;
+    }
+    a:hover,
+    a:focus {
+        border-color: #003366;
+        background: grey;
+        color: white;
+    }
+}
