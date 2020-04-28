@@ -4,7 +4,7 @@
     <title>RailsBlog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= favicon_link_tag  asset_path('logo.png') %>
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto+Slab:700|Open+Sans:300,400,700" type="text/css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,19 +16,19 @@
         <%= msg %>
       </div>
     <% end %>
-    <%= render "layouts/header" %> 
-   <div class='container'>
-    <%= yield %>
-    <hr>
-    <h6>
-      <% if logged_in? %>
-        <%= "Logged in as #{current_user.email}" %>
-        <%= link_to "(logout)", logout_path %>
-      <% else %>
-        <%= link_to "(login)", login_path %>
-      <% end %>
-    </h6>
-   </div>
-   <%= render "layouts/footer" %> 
+    <%= render "layouts/header" %>
+    <div class='container'>
+      <%= yield %>
+      <hr>
+      <h6>
+        <% if logged_in? %>
+          <%= "Logged in as #{current_user.email}" %>
+          <%= link_to "(logout)", logout_path %>
+        <% else %>
+          <%= link_to "(login)", login_path %>
+        <% end %>
+      </h6>
+    </div>
+    <%= render "layouts/footer" %>
   </body>
 </html>
