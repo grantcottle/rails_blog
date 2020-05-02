@@ -15,7 +15,9 @@
       </div> 
       <hr>
     <% end %> 
+    <% if logged_in? %>
     <%= link_to "Create a new article",  new_article_path%>
+  <% end  %>
     </div>
     <div class="pager_pagination">
       <%= will_paginate @articles %> 
